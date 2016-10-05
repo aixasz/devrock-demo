@@ -21,8 +21,8 @@ namespace WebApplication.Test
             var result = controller.Index();
 
             // Assert
-            Assert.IsType<ViewResult>(result);
-            Assert.Equal("Hello World", controller.ViewBag.Message);
+            var viewResult = Assert.IsType<ViewResult>(result);
+            Assert.Equal("Hello World", viewResult.ViewData["Message"]);
         }
     }
 }
