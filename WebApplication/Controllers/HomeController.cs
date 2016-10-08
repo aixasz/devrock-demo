@@ -14,5 +14,7 @@ namespace WebApplication.Controllers
             ViewBag.Message = "Hello World";
             return View();
         }
+
+        public IActionResult Test() => View("Hello Devrock!");
     }
 }
